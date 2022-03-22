@@ -1,0 +1,167 @@
+/*Styles for Media Queries*/
+
+p{
+    border: solid 1px black;
+    margin-bottom: 15px;
+}
+#p1{
+    background: #A52A2A;
+    height: 300px;
+    width: 300px;
+}
+#p2{
+    background: #DEB887;
+    height: 50px;
+    width: 50px;
+}
+h1{
+    font-size: 24px;
+}
+@media(min-width:900px){
+    h1{
+        font-size:45px;
+    }
+    #p1{
+        width: 70%;
+    }
+    #p2{
+        width: 250px;
+    }
+}
+@media(min-width:600px) and (max-width:899px){
+    h1{
+        font-size:34px;
+    }
+    #p1{
+        width: 450px;
+    }
+    #p2{
+        width: 150px;
+    }
+}
+@media print{
+    h1{
+        font-size: 12px;
+        font-weight: 400;
+    }
+    #p2{
+        display: none;
+    }
+}
+
+/*Styles for Orbits*/
+
+@-webkit-keyframes spin{
+    from{
+        transform: rotate(0);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+@keyframes spin{
+    from{
+        transform: rotate(0);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes twinkle{
+    from{opacity: 1;}
+    to{opacity: 0.1;}
+}
+
+@keyframes sunflares{
+    from{
+        box-shadow: 0 0 50px #F5C313;
+    }
+    to{
+        box-shadow: 0 0 125px #F5C313;
+    }
+}
+
+html,body{
+    height: 100%;
+}
+#universe{
+    background: black;
+    background: -webkit-radial-gradient(#555,#000);
+    background: -o-radial-gradient(#555,#000);
+    background: -moz-radial-gradient(#555,#000);
+    background: radial-gradient(#555,#000);
+}
+#stars{
+    height: 100%;
+    width: 100%;
+    background: url('images/stars.png');
+    
+    animation: twinkle 3s infinite alternate;
+}
+#sun{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    top: 50%;
+    left: 50%;
+    margin-top: -100px;
+    margin-left: -100px;
+
+    -moz-border-radius: 100%;
+    -o-border-radius: 100%;
+    -webkit-border-radius: 100%;
+    border-radius: 100%;
+    
+    background: orange;
+    background: -o-radial-gradient(#F5C313,#EC7E08);
+    background: -moz-radial-gradient(#F5C313,#EC7E08);
+    background: -webkit-radial-gradient(#F5C313,#EC7E08);
+    background: radial-gradient(#F5C313,#EC7E08);
+    
+    animation: sunflares 4s infinite alternate;
+}
+
+#earthOrbit{
+    width: 500px;
+    height: 600px;
+    border: solid 1px red;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -250px;
+    margin-top: -300px;
+    border-radius: 100%;
+
+    animation: spin  30s linear infinite;
+}
+
+#earth{
+    position: absolute;
+    top: 50%;
+    margin-top: -40px;
+    animation: spin 4s linear infinite;
+}
+
+#moonOrbit{
+/*    border: solid 1px red;*/
+    height: 120px;
+    width: 120px;
+    position: absolute;
+    top: 50%;
+    margin-top: -60px;
+    margin-left: -20px;
+    border-radius: 50%;
+    
+    animation: spin 4s linear infinite;
+}
+#moon{
+    width: 20px;
+    height: 20px;
+    
+    background: GRAY;
+    background: radial-gradient(#DDD,#888);
+    border-radius: 100%;
+    
+    animation: spin 2s linear infinite;
+}

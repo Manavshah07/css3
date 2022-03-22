@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS grid template area</title>
+    <style>
+        .container{
+            display: grid;
+            grid-template-areas: 
+                'header header header'
+                'content content sidebar'
+                'box-1 box-2 box-2'
+                'box-3 box-3 box-3'
+                'footer footer footer';
+            grid-gap: 1.5rem;
+        }
+        .header{
+            grid-area: header;
+        }
+        .content{
+            grid-area: content;
+        }
+        .sidebar{
+            grid-area:sidebar;
+        }
+        .box-1{
+            grid-area:box-1;
+        }
+        .box-2{
+            grid-area:box-2;
+        }
+        .box-3{
+            grid-area:box-3;
+        }
+        footer{
+            grid-area:footer;
+        }
+        .header, .footer{
+            text-align: center;
+        }
+        .header, .footer, .content, .sidebar, .box-1, .box-2, .box-3{
+            border: solid 1px #ccc;
+            padding: 5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+       <header class="header"> <h1>My website</h1></header>
+           <section class="content">
+               <h3>Welcome to my site</h3>
+               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, cupiditate placeat maiores. Beatae in provident dicta, tenetur laboriosam, cupiditate odit eius consequatur. Rem et ratione minima harum optio cumque adipisci. Eum impedit, in ipsam sed nam harum ut, iste inventore.</p>
+           </section>
+           
+        <aside class="sidebar">
+            <h3>Contact us</h3>
+            <ul>
+                <li>My company</li>
+                <li>Address line</li>
+                <li>Email</li>
+                <li>conatct number</li>
+            </ul>
+        </aside>
+        <div class="box-1">
+            <h3>HEading</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae fuga quaerat illum repellendus, iste quasi vero sunt placeat totam qui, ipsa voluptatem, sed optio necessitatibus. Iusto distinctio iure obcaecati nesciunt, repudiandae placeat, voluptatem explicabo fuga tempore itaque, pariatur architecto aliquam.</p>
+        </div>
+        <div class="box-2">
+            <h3>HEading</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae fuga quaerat illum repellendus, iste quasi vero sunt placeat totam qui, ipsa voluptatem, sed optio necessitatibus. Iusto distinctio iure obcaecati nesciunt, repudiandae placeat, voluptatem explicabo fuga tempore itaque, pariatur architecto aliquam.</p>
+        </div>
+        <div class="box-3">
+            <h3>HEading</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae fuga quaerat illum repellendus, iste quasi vero sunt placeat totam qui, ipsa voluptatem, sed optio necessitatibus. Iusto distinctio iure obcaecati nesciunt, repudiandae placeat, voluptatem explicabo fuga tempore itaque, pariatur architecto aliquam.</p>
+        </div>
+        <footer class="footer"><p>Copyright &copy; 2019 my company</p></footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flex Align</title>
+    <style>
+        .item{
+            background: #F4F4F$;
+            border: #ccc 1px solid;
+            padding: 1rem;
+            text-align: center;
+            margin: 0.5rem;
+            
+            flex-basis: 200px;/* it is same as width instead of this we can their width also. */
+        }
+        #container{
+            display: flex;
+            justify-content: space-between;
+/*            
+            justify-content is used to align items horizontally 
+            values/options:
+            - flex-start
+            - flex-end
+            - center
+            - space-between
+            - space-around
+            - space-evenly
+            */
+            flex-wrap: wrap;
+            
+            background: #555;
+            height: 600px;
+            
+            align-items: center;
+            
+            /*
+            align-items is usedto align items vertically
+            options:
+            - stretch (default)
+            - flex-start or baseline (there is different)
+            - flex-end
+            - center
+            Note:
+            container should have set height property for align-items to work!
+            */
+            
+/*            align-content: center;*/
+            /*
+            align-content is used to align items vertically where there there is an extra space. usually used with multiple rows of items.
+            options:
+            - flex-start
+            - flex-end
+            - center
+            - space-around
+            - space-between
+            - stretch (defaulT)
+            */
+        }
+            item:nth-child(3){
+                align-self: flex-end;
+            }
+            .item:nth-child(3){
+                align-self: flex-end;
+            }
+            .item-1{
+                align-self: flex-start;
+            }
+       
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div class="item item-1">
+            <h3>Item 1</h3>
+        </div>
+        
+        <div class="item item-2">
+            <h3>Item 2</h3>
+        </div>
+        
+        <div class="item item-3">
+            <h3>Item 3</h3>
+        </div>
+    </div>    
+</body>
+</html>

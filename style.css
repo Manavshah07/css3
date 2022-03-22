@@ -1,0 +1,385 @@
+/*style.css*/
+/*css for box.html*/
+#box{
+    background: red;
+    width: 200px;
+    height: 200px;
+/*    line-height: 200px;*/
+    text-align: center;
+    color: white;
+    margin: 40px auto 0;
+    padding: 50px;
+    box-sizing: border-box;
+    /*
+    It gives the sixzing according to the border or from borders so while giving padding it takes from borders !!*/
+    border-radius: 10px;
+    border-top-left-radius: 30%;
+    border-bottom-right-radius: 30%;
+}
+
+/*Css for colors.html*/
+#colors{
+    background: rgba(25,52,84,0.95);
+    
+}
+
+#colors #container{
+    width: 600px;
+    margin: 0 auto;
+    padding: 40px;
+    box-sizing: border-box;
+    background: rgba(0,0,0,0.1);
+}
+
+#colors #box{
+/*    background: linear-gradient(direction,color1,color2.....);*/
+/*    background: linear-gradient(135deg, red, blue);*/
+    background-image: linear-gradient(to right top, blue ,red);
+/*    background-image: linear-gradient(to right top , );*/
+/*    background-image: radial-gradient(red 10%, yellow 10%, green 25%);*/
+}
+
+/*Css for shadows*/
+#shadows #container{
+    width: 600px;
+    padding: 20px;
+    box-sizing: border-box;
+    background: #FC3;
+    margin: 40px auto;
+/*    border: solid 3px black;*/
+/*    box-shadow: h-offset v-offset blur spread color*/
+    box-shadow: 10px 10px 10px -10px #333, -10px -10px 10px -10px red;
+/*    box-shadow: 0 0 0 3px green, 0 0 0 6px red;*/
+}
+
+#shadows h1{
+    color: white;
+    text-shadow: -1px 2px 3px #333, 1px -2px 3px red;
+} 
+
+/*Columns.css*/
+#three-columns{
+    column-count: 3;
+    column-gap: 40px;
+    column-rule: double 3px red;
+}
+
+/*css for animation*/
+/*creating animation*/
+@keyframes moving-ball{
+    0%{
+        border-radius: 0;
+        background: red;
+        top: 0;
+        left: 0;
+    }
+    50%{
+        border-radius: 25%;
+        background: green;
+        top: 0;
+        left: 100px;;
+    }
+    100%{
+        border-radius: 50%;
+        background: blue;
+        top: 100px;
+        left: 100px;
+    }
+}
+
+#animation #box{
+    border-radius: 0;
+    position: relative;
+/*
+    applying the animation
+    animation-name: moving-ball;
+    animation-duration: 5s;
+    animation-timing-function: ease-in;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+*/
+    animation: moving-ball 5s ease-in 2s infinite alternate;
+}
+
+#animation #box2{
+    background: yellow;
+    width: 200px;
+    height: 200px;
+    color: green;
+    text-align: center;
+}
+
+#animation #box2:hover{
+    width: 400px;
+    height: 400px;
+    background: red;
+    transition: all 5s;
+}
+
+
+/*css for image hover*/
+#hover{
+    width: 600px;
+    margin: 40px auto;
+    
+}
+
+.portfolio{
+    position: relative;
+    width: 400px;
+    height: 400px;
+}
+
+#hover .portfolio:hover h2{
+    display: block;
+}
+
+#hover .portfolio h2{
+    width: 400px;
+    height: 400px;
+    line-height: 400px;
+    margin: 0;
+    position: absolute;
+    bottom: 0;
+    background: rgba(0,0,0,0.3);
+    text-align: center;
+    color: white;
+    display: none;
+}
+
+
+
+
+
+/*StyleSheet for media queries*/
+p{
+    border: solid 1px black;
+    margin-bottom: 15px;
+}
+#p1{
+    background: #A52A2A;
+    height: 300px;
+    width: 300px;
+}
+#p2{
+    background: #DEB887;
+    height: 50px;
+    width: 50px;
+}
+h1{
+    font-size: 24px;
+}
+@media(min-width:900px){
+    h1{
+        font-size: 45px;
+    }
+    #p1{
+        width: 70%;
+    }
+    #p2{
+        width: 250px;
+    }
+}
+@media (min-width: 600px) and (max-width:899px){
+    h1{
+        font-size: 34px;
+    }
+    #p1{
+        width: 450px;
+    }
+    #p2{
+        width: 150px;
+    }
+}
+
+@media print{
+    h1{
+        font-size: 12px;
+        font-weight: 400;
+    }
+    #p2{
+        display: none;
+    }
+}
+
+/*StyleSheet for orbit.html*/
+@-webkit-keyframes spain{
+    from{
+        transform: rotate(0);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+@keyframes spin{
+    from{
+        transform: rotate(0);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+@keyframes twinkle{
+    from{opacity: 1;}
+    to{opacity: 0.1;}
+}
+@keyframes sunFlares{
+    from{
+        box-shadow: 0 0 50px #F5C313;
+    }
+    to{
+        box-shadow: 0 0 125px #F5C313;
+    }
+}
+html, body{
+    height: 100%;
+}
+
+#universe{
+    background: black;
+    background: -webkit-radial-gradient(#555 , #000);
+    background: -moz-radial-gradient(#555 , #000);
+    background: -o-radial-gradient(#555 , #000);
+    background: radial-gradient(#555 , #000);
+}
+
+#stars{
+    height: 100%;
+    width: 100%;
+    background: url(images/stars.png);
+    animation: twinkle 3s infinite alternate;
+}
+
+#sun{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    top: 50%;
+    left: 50%;
+    margin-top: -100px;
+    margin-left: -100px;
+    -moz-border-radius: 100%;
+    -o-border-radius: 100%;
+    -webkit-border-radius: 100%;
+    border-radius: 100%;
+    
+    background: orange;
+    background: -o-radial-gradient(#F5C313, #EC7E08);
+    background: -moz-radial-gradient(#F5C313, #EC7E08);
+    background: -webkit-radial-gradient(#F5C313, #EC7E08);
+    background: radial-gradient(#F5C313, #EC7E08);
+    animation: sunFlares 4s infinite alternate;
+}
+
+#earth{
+    position: absolute;
+    top: 50%;
+    margin-top: -40px;
+    animation: spin 4s linear infinite;
+}
+#earthOrbit{
+    width: 500px;
+    height: 600px;
+/*    border: solid ssss1px red;*/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -300px;
+    margin-left: -250px;
+    border-radius: 50%;
+    animation: spin 30s linear infinite;
+}
+
+#moonOrbit{
+    height: 120px;
+    width: 120px;
+    position: absolute;
+    top: 50%;
+    margin-top: -60px;
+    margin-left: -20px;
+    border-radius: 50%;
+    animation: spin 4s linear infinite;
+}
+
+#moon{
+    width: 20px;
+    height: 20px;
+    background: GRAY;
+    background: radial-gradient(#DDD , #888);
+    border-radius: 100%;
+    animation: spin 2s linear infinite;
+}
+
+::selection{
+    background:rgba(255,0,0,0.7);
+    color:#fff;
+}
+
+::-webkit-scrollbar{
+    width:12px;
+}
+
+::-webkit-scrollbar-track{
+    box-shadow:inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius:10px;
+}
+
+::-webkit-scrollbar-thumb{
+    border-radius:10px;
+    background:rgba(255,0,0,0.8);
+}
+  
+::-webkit-scrollbar{
+    width: 15px;
+}
+
+::-webkit-scrollbar-button{
+    background: pink;
+}
+
+::-webkit-scrollbar-track{
+    box-shadow: inset 0 0 6px rgba(255,153,25,0.8);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb{
+    background: red;
+}
+
+::-webkit-scrollbar-track-piece{
+    background: red;
+}
+
+::-webkit-scrollbar-corner{
+    background: black;
+}
+
+::-webkit-scrollbar-resizer{
+    color: red;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

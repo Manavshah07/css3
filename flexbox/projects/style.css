@@ -1,0 +1,320 @@
+/*Genral Style*/
+:root{
+    --primary-color: #93cb52;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Roboto',sans-serif;
+    line-height: 1.4;
+}
+a{
+    text-decoration: none;
+}
+p{
+    margin: 0.75rem 0;
+}
+textarea{
+    resize: none;
+}
+/*Utility class*/
+.container{
+    max-width: 1350px;
+    margin: 0 auto;
+    padding:  2rem;
+    overflow: auto;
+}
+.py-1{ padding: 1.5rem 0}
+.py-2{ padding: 2rem 0}
+.py-3{ padding: 3rem 0}
+
+.p-1{ padding: 1.5rem}
+.p-2{ padding: 2rem}
+.p-3{ padding: 3rem}
+
+.bg-light{
+    background: #f4f4f4;
+    color: #333;
+}
+.bg-dark{
+    background: #333;
+    color: #fff;
+}
+
+.bg-primary{
+    background: var(--primary-color);
+}
+.text-primary{
+    color: #93cb52;
+}
+.text-center{
+    text-align: center;
+}
+.l-heading{
+    font-size: 4rem;
+    line-height: 1.1;
+    margin-bottom: 0.75rem;
+}
+
+.m-heading{
+    font-size: 2rem;
+    line-height: 1.1rem;
+    margin-bottom: 0.75rem;
+}
+
+.lead{
+    font-size: 1.3rem;
+    font-weight: 400;
+    margin-bottom: 2rem;
+}
+.btn{
+    display: inline-block;
+    color: #fff;
+    background: var(--primary-color);
+    padding: 0.5rem 2rem;
+    border: none; /*used to remove border of button tag*/
+    border-radius: 5px;
+}
+.btn-dark{
+    background: #333;
+}
+.btn:hover{
+    background: #69a129;
+    transition: background .3s;
+    cursor: pointer;
+}
+.list{
+    margin: 0.5rem 0;
+    list-style: none;
+}
+
+.list li{
+    padding: 0.5rem 0;
+    border-bottom: dotted 1px #444;
+}
+/*navbar*/
+#navbar{
+    display: flex;
+    justify-content: space-between;
+    background: #333;
+    color: #fff;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    padding: 1rem;
+}
+
+#navbar ul{
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+#navbar ul li a{
+    color: #fff;
+    padding: 0.75rem;
+    margin: 0 0.25rem;
+}
+#navbar ul li a:hover{
+    background: var(--primary-color);
+    border-radius: 5px;
+    transition: background .3s;
+}
+/*showcase*/
+#showcase{
+    background: url('images/showcase.jpg') no-repeat center center/cover;
+    height: 100vh;
+    color: #fff;
+}
+
+#showcase .showcase-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    height: 100%;
+    padding: 0 2rem;
+/*overlay*/
+    position: absolute;
+    top: 65px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.4);
+}
+
+/*Section What we do*/
+
+#what .items{
+    display: flex;
+    padding: 1rem;
+}
+
+#what .items .item{
+    text-align: center;
+    flex: 1;
+    padding: 1rem;
+}
+#what .items .item:hover{
+    cursor: pointer;
+    background: var(--primary-color);
+    color: #f4f4f4;
+    transition: background .3s , color .3s;
+}
+#what .items .item:hover i{
+    background: #fff;
+    color: var(--primary-color);
+}
+#what .items .item i{
+    background: var(--primary-color);
+    width: 4rem;
+    height: 4rem;
+    line-height: 4rem;
+    border-radius: 100%;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+/*Section who we are*/
+#who{
+    display: flex;
+}
+#who div{
+    flex: 1;
+}
+#who .who-img{
+    background: url('images/people.jpg') no-repeat center center/cover;
+}
+
+/*Section or client*/
+
+#clients .items{
+    display: flex;
+}
+#clients .items img{
+    display: block;
+    margin: auto;
+    width: 60%;
+}
+
+/*section contacts*/
+#contact{
+    display: flex;
+}
+
+#contact .contact-form, #contact .map{
+    flex: 1;
+}
+
+#contact .contact-form .form-group{
+    margin: 0.7 5rem;
+}
+#contact .contact-form label{
+    display: block;
+}
+#contact .contact-form input,
+#contact .contact-form textarea{
+    width: 100%;
+    padding: 0.5rem;
+}
+
+/*scroolbar*/
+::-webkit-scrollbar{
+    width: 12px;
+}
+::-webkit-scrollbar-track{
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 10px
+}
+
+::-webkit-scrollbar-thumb{
+    background: var(--primary-color);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:window-inactive{
+    background: rgba(147,203,82,0.6);
+}
+::selection{
+    background: rgba(147,203,82,0.6);
+}
+
+
+/*mobile css*/
+
+/*Mobile CSS*/
+@media(max-width: 550px){
+    #navbar{
+        flex-direction: column;
+        align-items: center;
+    }
+    #navbar .logo{
+        margin-bottom: 0.75rem;
+    }
+    
+    #navbar ul{
+        padding: 0.5rem;
+    }
+    
+    #showcase .showcase-content{
+        top: 115px;
+    }
+    .l-heading{
+        font-size: 2.6rem;
+        line-height: 2.6rem;
+    }
+    .lead{
+        font-size: 1.1rem;
+    }
+    
+    #what .items{
+        flex-direction: column;
+    }
+    #who{
+        flex-direction: column-reverse;
+    }
+    #who div{
+        flex: none;
+    }
+    #who .who-img{
+        height: 300px;
+    }
+    
+    #clients .items div:last-child{
+        display: none;
+    }
+    
+    #contact{
+        flex-direction: column;
+    }
+    #contact .contact-form, #contact .map{
+        flex: none;
+    }
+    .map{
+        height: 300px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

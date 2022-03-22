@@ -1,0 +1,39 @@
+html{
+    background: #eee;
+}
+article{
+    position: relative;
+    margin: 50px auto;
+    padding: 50px;
+    width: 450px;
+    font: georgia,serif;
+    color: #222;
+    text-align: justify;
+    background: #fff;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
+
+article h1{
+    margin: 10px 0;
+    font: Georgia,serif;
+    color: #333;
+}
+
+article:before,
+article:after{
+    content: '';
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    box-shadow: inherit;
+    transform: rotate(2deg);
+}
+
+article:after{
+    transform: rotate(-1deg);
+}

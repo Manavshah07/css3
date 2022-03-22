@@ -1,0 +1,86 @@
+.whole{
+    background: #fff;
+}
+.header{
+    width: 100%;
+    height: 45px;
+    background-color: #000;
+    position: fixed;
+    top: 0;
+    margin: 0 auto;
+}
+.pull-right{
+    float: right;
+}
+.clearfix{
+    clear: none;
+}
+.img-tag{
+    display: inline-block;
+    padding-right: 10px;
+}
+.top-header{}
+a{
+    text-decoration: none;
+    color: #fff;
+}
+.top-header ul li{
+    text-align: center;
+    display: inline-block;
+    padding-right: 20px;
+}
+    
+.link:hover{
+    padding:13px;
+    background-color: #aaa;  
+}
+.newyork-title{
+    position: absolute;
+    top: 590px;
+    left: 700px;
+    color: #fff;
+    font-size: 20px;
+    font-family: helvectica Arial sans-serif;
+}
+.newyork-para{
+    position: absolute;
+    top: 640px;
+    left: 590px;
+    color: #fff;
+    font-size: 20px;
+}
+
+.band-title{
+    text-align: center;
+    margin-top: 100px;
+    font-family: sans-serif;
+    font-weight: 300;
+}
+.love-music{
+    text-align: center;
+    margin: 10px;
+    color: #a5a5a5;   
+    font-family: sans-serif;
+}
+.band-para{
+    display: inline-block;
+    width: 900px;
+    font-size: 18px;
+    margin-left: 350px;
+}
+.main-img{
+    display: inline-block;
+    width: 1099px;
+    height: 650px;
+    margin-left: 150px;
+    margin-right: 150px;
+}
+.image{
+    display: inline-block;
+    padding-left: 150px;
+    margin-right: px;
+}
+.tour-dates{
+    
+}
+.tickets{}

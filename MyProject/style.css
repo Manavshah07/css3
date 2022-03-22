@@ -1,0 +1,398 @@
+/****************************************************
+****************GENERAL SECTION**********************
+****************************************************/
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: Lato, sans-serif;
+    font-size: 15px;
+    min-height: 5000px;
+}
+.margin-bottom-15{
+    margin-bottom: 15px;
+}
+.margin-bottom-20{
+    margin-bottom: 20px;
+}
+.margin-bottom-25{
+    margin-bottom: 25px;
+}
+.margin-bottom-30{
+    margin-bottom: 30px;
+}
+.margin-bottom-50{
+    margin-bottom: 50px;
+}
+.margin-bottom-70{
+    margin-bottom: 70px;
+}
+.margin-top-90{
+    margin-bottom: 90px;
+}
+.paragraph{
+    line-height: 1.5;
+    text-align: justify;
+}
+.text-right{
+    text-align: right;
+}
+.text-center{
+    text-align: center;
+}
+.text-gray{
+    color: #AAA;
+}
+.section .no-padding-left{
+    padding-left: 0;
+}
+.section .no-padding-right{
+    padding-right: 0;
+}
+.pull-right{
+    float: right;
+}
+.pull-left{
+    float: left;
+}
+/***************************************************
+********************BUTTON SECTION*******************
+***************************************************/
+
+.btn{
+    display: inline-block;
+    background: #000;
+    color: #FFF;
+    padding: 8px 15px;
+    text-decoration: none;
+    text-transform: capitalize;
+    border: solid 1px #000;
+}
+.btn.btn-blue-outline{
+    background: #FFF;
+    border: solid 1px #2196F3;
+    color: #2196F3;
+}
+.btn.btn-blue-outline:hover{
+    background: #2196F3;
+    color: #FFF;
+}
+.btn.btn-blue{
+    background: #2196F3;
+    border: solid 1px #2196F3;
+}
+.btn.btn-blue:hover{
+    background: #FFF;
+    color: #2196F3;
+}
+.btn:hover{
+    background: #CCC;
+    color: #000;
+    border: solid 1px #CCC;
+}
+
+/****************************************************
+****************MANAGE OUR SECTION*******************
+****************************************************/
+.section{
+    padding: 85px 0 110px;
+}
+.dark-section{
+    background: #000;
+}
+.section-title{
+    font-size: 30px;
+    font-weight: 400;
+    letter-spacing: 4px;
+    text-align: center;
+}
+.dark-section .section-title{
+    color: #FFF;
+}
+.section .lead{
+    font-style: italic;
+    color: #999;
+    font-weight: 400;
+    text-align: center;
+}
+.container{
+    width: 770px;
+    margin: 0 auto;
+}
+
+
+#band-section .col-33{
+    padding: 0 50px;
+}
+
+/****************************************************
+****************MANAGE COLUMNS***********************
+****************************************************/
+
+.col-100{
+    width: 100%;
+    padding: 0 0 0 9px;
+}
+.col-33{
+    width: 33.333%;
+    float: left;
+    padding: 0 9px;
+    box-sizing: border-box;
+/*    background: #AAA;*/
+}
+.clearfix{
+    margin-left: -9px;
+}
+.clearfix:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.clearfix .last-col{
+    float: right;
+}
+.header .clearfix{
+    margin-left: 0;
+}
+.w-100{
+    width: 100%;
+}
+.h-100{
+    height: 100%;
+}
+
+/****************************************************
+******************EVENTS SECTION*********************
+****************************************************/
+
+.event-list{
+    background: #FFF;
+    border: solid 1px #CCC;
+}
+.event-item{
+    padding: 10px 20px;
+    border-bottom: solid 1px #CCC;
+    list-style-type: none;
+}
+.last-event-item{
+    border-bottom: none;
+}
+.tag-sold-out{
+    margin-left: 20px;
+    background: #F44336;
+    color: #FFF;
+    padding: 3px 10px;
+    box-sizing: border-box;
+}
+
+.badge{
+    text-align: right;
+    display: inline-block;
+    background: #000;
+    color: #FFF;
+    padding: 3px 8px;
+    border-radius: 100%;
+    margin-right: 10px;
+}
+.portfolio{
+    
+    position: relative;
+}
+
+.portfolio:hover .overlay{
+    display: block;
+}
+.overlay{
+    position: absolute;
+    height: 98.26%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.4);
+    display: none;
+}
+.event-details{
+    padding: 0 25px 0 15px;
+    
+}
+.event-card{
+    width: 245px;
+    background: #FFF;
+}
+
+.event-card .paragraph{
+    font-size: 14px;
+}
+
+
+/****************************************************
+******************NAVBAR SECTION*********************
+****************************************************/
+
+.navbar{
+    width: 100%;
+    height: 45px;
+}
+.navbar-dark{
+    background: #000;
+    color: #FFF;
+}
+.navbar-fixed{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+}
+.menu{
+    height: 45px;
+}
+.menu-item{
+    display: inline-block;
+    padding: 0 20px;
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 45px;
+    height: 45px;
+}
+.menu-item a:link,
+.menu-item a:visited{
+    color: #FFF;
+    text-decoration: none;
+}
+.menu-item:hover{
+    background: #CCC;
+    color: #000;
+    cursor: pointer;
+}
+.menu-item.menu-red:hover{
+    background: #F44336;
+    color: #FFF;
+}
+
+.menu-item:hover .sub-menu{
+    display: block;
+}
+.sub-menu .menu-item{
+    display: block;
+    text-transform: capitalize;
+    height: 35px;
+    line-height: 35px;
+    padding-right: 50px;
+}
+.position{
+    position: relative;
+}
+.sub-menu{
+    position: absolute;
+    left: 0;
+    top: 45px;
+    background: #FFF;
+    box-shadow: 3px 4px 10px 0 #DDD, -3px 4px 8px 0 #DDD;
+    display: none;
+}
+
+
+/****************************************************
+******************MIDDLE SECTION*********************
+****************************************************/
+
+.middle-section{
+}
+.img-section{
+    width: 1520px;
+    height: 720px;
+
+}
+.middle-section-title{
+    display: block;
+    position: absolute;
+    top: 600px;
+    margin-left: 710px;
+    color: #fff;
+       
+}
+.middle-section-para{
+    display: block; 
+    position: absolute;
+    top: 650px;
+    margin-left: 615px;
+    color: #fff;
+}
+
+/* this is section is for the top image */
+#slider{
+    position: relative;
+    top: 45px;
+}
+
+/****************************************************
+*****************Info Section*********************
+****************************************************/
+.info-section{
+    padding-top: 85px;
+    padding-bottom: 115px;
+    font-size: 15px;
+    line-height: 1.5px;
+}
+.contact-sec{
+    text-align: center;
+}
+.fan-sec{
+    text-align: center;
+}
+.location-section{
+    padding-left: 360px;
+    display: inline-block;
+}
+.forms{
+    display: inline-block;
+    width: 300px;
+    text-align: right;
+    
+}
+.section-name{
+    display: inline;
+    width: 200px;
+}
+.section-email{
+    display: block;
+}
+.section-message{
+    display: block;
+}
+.section-submit{
+    display: inline-block;
+}
+.symbols{
+        padding-top: 70px;
+        text-align: center;
+        font-size: 15px;
+}
+.symbols-icon:hover{
+    color: #AAA;
+}
+.footer-head{
+    text-align: center;
+}
+/*This is section is for changing filter of map image*/
+.grayscale{
+    filter: grayscale(60%)
+}
+@media(min-width:600px) and (max-width:899px){
+    body{
+        width: 70%;
+        font-size: 50px;
+    }
+@media(min-width:100px) and (max-width:499px){
+    body{
+        width: 50%;
+        font-size: 30px;
+    }
+
+
+
+
+
+

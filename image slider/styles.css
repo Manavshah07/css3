@@ -1,0 +1,12 @@
+.btn-left{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    padding: 10px;
+}
+.btn-right{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    padding: 10px;
+}

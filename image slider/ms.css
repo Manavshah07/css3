@@ -1,0 +1,21 @@
+.img-tags{
+    display: inline-block;
+    margin-right: 10px;
+    height: 400px;
+    width: 400px;
+    position: relative;
+    border: red 1px solid;
+    overflow: hidden; 
+}
+.imgs{
+    margin-right: 10px;
+}
+.imgs:hover{
+/*
+    width: 415px;
+    height: 515px;
+*/
+    transform: scale(1.2);
+    cursor: pointer;
+    transition: all 0.25s ease-in-out;
+}

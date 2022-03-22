@@ -1,0 +1,62 @@
+/*Project*/
+.header{
+    width: 100%;
+    height: auto;
+    background: #000;
+    position: fixed;
+    top: 5; 
+}
+.whole{
+    background: #fff;
+}
+.pull-right{
+    float: right;
+}
+.clearfix{
+    clear: both;
+}
+a{
+    text-decoration: none;
+    color: #fff;
+}
+.top-header ul li{
+    display: inline-block;
+    margin-right: 30px; 
+}
+.top-header ul{
+    width: 550px;
+}
+.link:hover{
+    background-color: #aaa;
+    
+}
+/*a{
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+}
+.top-header ul{
+    height: 30px;
+    padding: 10px;
+}
+.top-header ul li{
+    display: inline-block;
+    padding: 5px 20px;
+    line-height: 15px;
+    text-align: center;
+}
+.link:hover{
+    background-color: #aaa;
+    width: 90px
+    height: 45px;
+}*/
+
+    
+#hover{
+    margin: 2px auto;
+    padding-right: 3px;
+}
+#hover .img-tag:hover{
+    display: block;
+    background: red;
+}
